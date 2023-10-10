@@ -1,0 +1,21 @@
+.app__search{
+    display: flex;
+    place-content: center;
+}
+
+.searchbar {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+}
+
+.search__input{
+    outline: none;
+    font-size: 1.3rem;
+    border: none;
+    flex: 1;
+}

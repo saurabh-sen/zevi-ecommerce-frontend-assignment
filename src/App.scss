@@ -1,0 +1,22 @@
+// define background-color and color variables
+$background-color: #fff;
+$text-color: #000;
+
+// define a mixin
+@mixin app__background {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.App {
+    background-image: url("./assets/home-background.jpg");
+    min-height: 100dvh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+}
+.nav{
+    text-align: right;
+    padding: 10px 40px;
+}
