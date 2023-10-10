@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './SearchSuggestions.scss'
-import { ItrendData, trendData, popularSuggestionsData } from '../../data/trendData'
+import { ITrendData, trendData, popularSuggestionsData } from '../../data/trendData'
 
 const SearchSuggestions: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ const SearchSuggestions: React.FC = () => {
 
 export default SearchSuggestions
 
-const TrendCard: React.FC<ItrendData> = ({ image, title }) => {
+const TrendCard: React.FC<ITrendData> = ({ image, title }) => {
   return (
     <div className="trend__card">
       <div className="trend__card--image">

@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface SearchState {
+export interface ISearchState {
   showSuggestions: boolean;
 }
 
-const initialState: SearchState = {
+const initialState: ISearchState = {
   showSuggestions: false,
 };
 

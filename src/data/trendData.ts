@@ -4,18 +4,18 @@ import trend3 from '../assets/trend-3.jpg'
 import trend4 from '../assets/trend-4.jpg'
 import trend5 from '../assets/trend-5.jpg'
 
-export interface ItrendData {
+export interface ITrendData {
   _id: string;
   image: string;
   title: string;
 }
 
-export interface IpopularSuggestionsData {
+export interface IPopularSuggestionsData {
   _id : string;
   title: string;
 }
 
-export const trendData: ItrendData[] = [
+export const trendData: ITrendData[] = [
   {
     _id: "1",
     image: trend1,
@@ -43,7 +43,7 @@ export const trendData: ItrendData[] = [
   },
 ];
 
-export const popularSuggestionsData: IpopularSuggestionsData[] = [
+export const popularSuggestionsData: IPopularSuggestionsData[] = [
   {
     _id: "1",
     title: 'Striped shirt dress'

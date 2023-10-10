@@ -1,0 +1,21 @@
+.search__logo__container {
+    display: flex;
+    margin-left: auto;
+    padding: 40px;
+}
+
+.searchbar {
+    border: 1px solid #e4e4e4;
+}
+
+.search__results {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+}
+
+.filter__text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}

@@ -1,0 +1,40 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion__content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion__title__text {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.accordion__item__text {
+  font-size: 1rem;
+}
+
+.accordion__content__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
