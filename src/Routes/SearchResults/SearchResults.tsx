@@ -32,7 +32,7 @@ const SearchResults = () => {
     }
 
     dispatch(setSearchResults(result))
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="search__results">
