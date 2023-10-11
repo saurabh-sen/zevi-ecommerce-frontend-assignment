@@ -7,49 +7,46 @@ import Down from "../../svgs/Down";
 
 interface IAccordionProps {
     title: string
-    childrens?: IBrandFilter[] | IPriceRangeFilter[]
+    childrens?: IBrandFilter[] | IPriceRangeFilter[];
+    onChange: (id: number) => (e : React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Accordion = ({ title, childrens }: IAccordionProps) => {
+const Accordion = ({ title, childrens, onChange }: IAccordionProps) => {
 
     const [isOpen, setIsOpen] = React.useState(true);
 
-    const handleToggle = () => {
-        setIsOpen(!isOpen);
-    }
-
     return (
         <div className="accordion">
-            <div className="accordion__title" onClick={handleToggle}>
+            <div className="accordion__title" onClick={() => setIsOpen(!isOpen)}>
                 <p className="accordion__title__text">{title}</p>
                 <span className="accordion__title__icon" >
                     <Down />
                 </span>
             </div>
             {
-                isOpen && <AccordionContent title={title} childrens={childrens} />
+                isOpen && <AccordionContent title={title} childrens={childrens} onChange={onChange} />
             }
 
         </div>
     )
 }
 
-const AccordionContent = ({ title, childrens }: IAccordionProps) => {
+const AccordionContent = ({ title, childrens, onChange }: IAccordionProps) => {
     return (
         <div className="accordion__content">
             {
                 title !== 'Ratings'
                     ? <>
                         {
-                            childrens?.map((child) => <AccordionItem key={child.id} id={child.id} title={child.name} />)
+                            childrens?.map((child) => <AccordionItem key={child.id} id={child.id} title={child.name} onChange={onChange} />)
                         }
                     </>
                     : <>
-                        <AccordionItemRating rating={5} />
-                        <AccordionItemRating rating={4} />
-                        <AccordionItemRating rating={3} />
-                        <AccordionItemRating rating={2} />
-                        <AccordionItemRating rating={1} />
+                        <AccordionItemRating rating={5} onChange={onChange} />
+                        <AccordionItemRating rating={4} onChange={onChange} />
+                        <AccordionItemRating rating={3} onChange={onChange} />
+                        <AccordionItemRating rating={2} onChange={onChange} />
+                        <AccordionItemRating rating={1} onChange={onChange} />
                     </>
             }
 

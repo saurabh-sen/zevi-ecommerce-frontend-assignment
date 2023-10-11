@@ -6,7 +6,7 @@ const ResultContainer = () => {
   return (
     <section className='result__container' style={{
       display: 'flex',
-      gap: '1rem',
+      gap: '4rem',
     }}>
       <Filters />
       <Results />
